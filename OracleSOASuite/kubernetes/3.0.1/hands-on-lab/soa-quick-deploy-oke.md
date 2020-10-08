@@ -529,6 +529,7 @@ Now the environment is ready to start the Oracle SOA Suite Domain creation with 
     *  image: container-registry.oracle.com/middleware/soasuite:12.2.1.4
     *  clusterName: osb_cluster
     *  managedServerNameBase: osb_server
+    *  managedServerPort: 9001
     
     You can manually edit `create-domain-inputs.yaml` with above values or use the below sed commands to quickly update:
 
@@ -541,6 +542,7 @@ Now the environment is ready to start the Oracle SOA Suite Domain creation with 
     $ sed -i -e "s:image\: soasuite\:12.2.1.4:image\: container-registry.oracle.com/middleware/soasuite\:12.2.1.4:g" create-domain-inputs.yaml
     $ sed -i -e "s:clusterName\: soa_cluster:clusterName\: osb_cluster:g" create-domain-inputs.yaml
     $ sed -i -e "s:managedServerNameBase\: soa_server:managedServerNameBase\: osb_server:g" create-domain-inputs.yaml
+    $ sed -i -e "s:managedServerPort\: 8001:managedServerPort\: 9001:g" create-domain-inputs.yaml
     ```
 
 1. Run the create-domain.sh script to create a domain
